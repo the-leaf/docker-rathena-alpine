@@ -15,16 +15,16 @@
 $ docker run --link rathena-mysql:mysql -p 127.0.0.1:6900:6900 -p 127.0.0.1:6121:6121 -p 127.0.0.1:5121:5121 --name rathena -d kafka/rathena
 ```
 
-where rathena-mysql is mysql container with updated rAthena sql database 
+where rathena-mysql is mysql container with updated rAthena sql database
 
 ## User Feedback
 
 ### Issues
 
-If you have any problems with or questions about this image, please contact through a [GitHub issue](https://github.com/ofkindness/docker-openkore/issues).
+If you have any problems with or questions about this image, please contact through a [GitHub issue](https://github.com/ofkindness/docker-rathena/issues).
 
 ### Contributing
 
 You are invited to contribute new features, fixes, or updates, large or small; It is always thrilled to receive pull requests, and process them.
 
-Before you start to code, it is recommend discussing your plans through a [GitHub issue](https://github.com/ofkindness/docker-openkore/issues), especially for ambitious contributions.
+Before you start to code, it is recommend discussing your plans through a [GitHub issue](https://github.com/ofkindness/docker-rathena/issues), especially for ambitious contributions.
