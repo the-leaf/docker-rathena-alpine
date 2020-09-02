@@ -2,7 +2,7 @@ FROM alpine:latest
 
 MAINTAINER ZixSeRo <tkp2147.abyss@gmail.com>
 
-RUN apk add --no-cache git curl make gcc g++ mariadb-dev pcre-dev zlib-dev nano dos2unix bind-tools
+RUN apk add --no-cache git curl make gcc g++ mariadb-dev pcre-dev zlib-dev nano dos2unix bind-tools linux-headers libstdc++ libressl-dev
 
 RUN mkdir -p /opt/rAthena \
     && git clone https://github.com/rAthena-Thailand/rathena.git /opt/rAthena \
@@ -11,7 +11,7 @@ RUN mkdir -p /opt/rAthena \
     && make clean \
     && make server
 
-RUN apk del curl make
+RUN apk del curl make libressl-dev
 
 WORKDIR /opt/rAthena
 
