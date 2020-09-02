@@ -13,7 +13,7 @@ RUN mkdir -p /opt/rAthena \
 
 RUN apk del curl make
 
-WORKDIR /var/rathena-master
+WORKDIR /opt/rAthena
 
 COPY ./docker-entrypoint.sh docker-entrypoint.sh
 
