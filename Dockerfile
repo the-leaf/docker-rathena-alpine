@@ -2,7 +2,7 @@ FROM alpine:latest
 
 MAINTAINER ZixSeRo <tkp2147.abyss@gmail.com>
 
-RUN apk add --no-cache git curl make gcc g++ mariadb-dev pcre-dev zlib-dev mariadb-client-libs nano dos2unix bind-tools
+RUN apk add --no-cache git curl make gcc g++ mariadb-dev pcre-dev zlib-dev nano dos2unix bind-tools
 
 RUN mkdir -p /opt/rAthena \
     && git clone https://github.com/rAthena-Thailand/rathena.git /opt/rAthena \
