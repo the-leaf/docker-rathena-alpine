@@ -40,4 +40,10 @@ sed -i "s/\/\/bind_ip: 127.0.0.1/bind_ip: ${PUBLIC_IP}/g" ./conf/login_athena.co
 sed -i "s/\/\/char_ip: 127.0.0.1/char_ip: ${PUBLIC_IP}/g" ./conf/char_athena.conf
 sed -i "s/\/\/map_ip: 127.0.0.1/map_ip: ${PUBLIC_IP}/g" ./conf/map_athena.conf
 
+sed -i "s/\/\/userid: s1/userid: ${LOGIN_USER_DB}/g" ./conf/char_athena.conf
+sed -i "s/\/\/passwd: p1/passwd: ${LOGIN_PASS_DB}/g" ./conf/char_athena.conf
+
+sed -i "s/\/\/userid: s1/userid: ${LOGIN_USER_DB}/g" ./conf/map_athena.conf
+sed -i "s/\/\/passwd: p1/passwd: ${LOGIN_PASS_DB}/g" ./conf/map_athena.conf
+
 exec "$@"
