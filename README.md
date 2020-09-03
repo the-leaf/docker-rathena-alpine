@@ -28,3 +28,19 @@ If you have any problems with or questions about this image, please contact thro
 You are invited to contribute new features, fixes, or updates, large or small; It is always thrilled to receive pull requests, and process them.
 
 Before you start to code, it is recommend discussing your plans through a [GitHub issue](https://github.com/ofkindness/docker-rathena/issues), especially for ambitious contributions.
+
+###Variable Settings
+MYSQL_IP = mysqlserver ip
+MYSQL_PORT = mysqlserver port
+MYSQL_ENV_MYSQL_USER = username db
+MYSQL_ENV_MYSQL_PASSWORD = password db
+MYSQL_ENV_MYSQL_DATABASE = db name
+
+PUBLIC_IP = ip host or ddns server
+PUBLIC_LOGIN_PORT = login port
+PUBLIC_CHAR_PORT = char port
+PUBLIC_MAP_PORT = map port
+
+LOGIN_USER_DB = Server Communication username
+LOGIN_PASS_DB = Server Communication password
+

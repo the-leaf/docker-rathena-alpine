@@ -41,13 +41,17 @@ if [ -z "$PUBLIC_IP" ]; then
 	PUBLIC_IP=$(hostname -i)
 fi
 
-sed -i "s/\/\/bind_ip: 127.0.0.1/bind_ip: ${PUBLIC_IP}/g" ./conf/login_athena.conf
-sed -i "s/\/\/char_ip: 127.0.0.1/char_ip: ${PUBLIC_IP}/g" ./conf/char_athena.conf
-sed -i "s/\/\/map_ip: 127.0.0.1/map_ip: ${PUBLIC_IP}/g" ./conf/map_athena.conf
+sed -i "s/\/\/login_port: 6900/login_port: ${PUBLIC_LOGIN_PORT}/g" ./conf/login_athena.conf
 
+sed -i "s/\/\/char_ip: 127.0.0.1/char_ip: ${PUBLIC_IP}/g" ./conf/char_athena.conf
+sed -i "s/\/\/login_port: 6900/login_port: ${PUBLIC_LOGIN_PORT}/g" ./conf/char_athena.conf
+sed -i "s/\/\/char_port: 6121/char_port: ${PUBLIC_CHAR_PORT}/g" ./conf/char_athena.conf
 sed -i "s/\/\/userid: s1/userid: ${LOGIN_USER_DB}/g" ./conf/char_athena.conf
 sed -i "s/\/\/passwd: p1/passwd: ${LOGIN_PASS_DB}/g" ./conf/char_athena.conf
 
+sed -i "s/\/\/map_ip: 127.0.0.1/map_ip: ${PUBLIC_IP}/g" ./conf/map_athena.conf
+sed -i "s/\/\/char_port: 6121/char_port: ${PUBLIC_CHAR_PORT}/g" ./conf/map_athena.conf
+sed -i "s/\/\/map_port: 5121/map_port: ${PUBLIC_MAP_PORT}/g" ./conf/map_athena.conf
 sed -i "s/\/\/userid: s1/userid: ${LOGIN_USER_DB}/g" ./conf/map_athena.conf
 sed -i "s/\/\/passwd: p1/passwd: ${LOGIN_PASS_DB}/g" ./conf/map_athena.conf
 
